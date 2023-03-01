@@ -1,0 +1,8 @@
+typer==0.7.0
+pytest==7.2.1
+openai==0.26.5
+pyaudio==0.2.13
+pyttsx3==2.90
+SpeechRecognition==3.9.0
+configparser==5.3.0
+python-dotenv==1.0.0
