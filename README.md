@@ -17,8 +17,6 @@ Speech2GPT (working title) is a command line tool written in Python which gives 
 
 <h3>Known issues:</h3>
 - Exits with error if the prompt is spoken less than ~.25 seconds after intro prompt finishes.
-- You tell me!  Pretty basic so far
-
 ## Installation
 
 Speech2GPT was written with Python 3.11.2, but appears to be working with 3.10 as well.  I haven't tested it on earlier versions yet.
@@ -28,14 +26,16 @@ Install required python dependencies:
 $ python -m pip install -r requirements.txt
 '''
 
-Add your ChatGPT API key to line 47 of Speech2GPT.py:
+Add your ChatGPT API key to line 90 of Speech2GPT.py:
 '''
 ...
-44 def passToOpenAI(command):
-45     maxT = 4097
-46     print("Passing to OpenAI: "+command)
-47     openai.api_key = ""
-48     usrPrompt = command
+85 def passToOpenAI(command):
+86     maxT = 4097
+87    print("Passing to OpenAI: "+command)
+88
+89    # Get API key from environment variables, or put your own key here
+90     openai.api_key = ""
+91     usrPrompt = command
 ...
 '''
 
